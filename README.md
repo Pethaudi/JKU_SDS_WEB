@@ -5,4 +5,4 @@
 
 1. start the project with: npm start
 (you must have browser sync installed)
-2. save all data files under /data
+2. save all data files under /results
