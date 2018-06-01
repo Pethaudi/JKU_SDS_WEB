@@ -1,5 +1,5 @@
 # JKU_SDS_WEB
-## this is a repo for research purposes#
+## this is a repo for research purposes
 
 ## INFO
 
