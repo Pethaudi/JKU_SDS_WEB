@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "alias bsync='browser-sync start -s src -f src -b \"google chrome\" --no-notify'"
+    "start": "browser-sync start -s src -f src -b \"google chrome\" --no-notify"
   },
   "repository": {
     "type": "git",
