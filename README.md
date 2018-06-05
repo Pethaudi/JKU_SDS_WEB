@@ -16,3 +16,10 @@
 ## HOW TO SUBMIT CHANGES
 2. git commit
 3. git push
+
+## IMPORTANT D3 METHODES
+1. select("...") || selectAll("...")
+2. elem.append("...")
+3. elem.style("...")
+4. elem.attr("...")
+5. elem.text("...")
