@@ -17,9 +17,13 @@
 2. git commit
 3. git push
 
-## IMPORTANT D3 METHODES
+## IMPORTANT D3 FUNCTIONS
 1. select("...") || selectAll("...")
 2. elem.append("...")
 3. elem.style("...")
 4. elem.attr("...")
 5. elem.text("...")
+6. elem.data(...) //the data you want to use (any object)
+7.     .enter() //goes through the data one by one (foreach)
+
+you can pass also functions as a parameter
