@@ -1,4 +1,5 @@
-showAppearancePerContinent()
+showAppearancePerContinentBar()
+verticalBar()
 
 /*
 you always need to make an async funtion to wait for the result of the fetch
@@ -8,7 +9,7 @@ function fetchFromData(name){
         .then(response => response.json())
 }
 
-async function showAppearancePerContinent(){
+async function showAppearancePerContinentBar(){
     let data;
     data = await fetchFromData("AppearancesPerContinent");
 
@@ -34,3 +35,26 @@ async function showAppearancePerContinent(){
             .text(function(d) { return d }) //setting the text
 }
 
+function verticalBar(){
+    var data = [80, 100, 56, 120, 180, 30, 40, 120, 160]
+    var svgwidth = 500, svgheight = 300, barpadding = 5
+    var barwidth = svgwidth / data.length
+
+    var svgelem = d3.select(".verticalBar")
+        .attr("width", svgwidth)
+        .attr("height", svgheight)
+
+    var barchart = svgelem.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("y", function(d) {
+            return svgheight - d
+        })
+        .attr("height", function(d) { return d })
+        .attr("width", barwidth - barpadding)
+        .attr("transform", function(d, i) {
+            var translate = [barwidth * i, 0]
+            return "translate(" + translate + ")"
+        })
+}
