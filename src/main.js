@@ -35,26 +35,49 @@ async function showAppearancePerContinentBar(){
             .text(function(d) { return d }) //setting the text
 }
 
-function verticalBar(){
-    var data = [80, 100, 56, 120, 180, 30, 40, 120, 160]
-    var svgwidth = 500, svgheight = 300, barpadding = 5
+async function verticalBar(){
+    var data = await fetchFromData("AppearancesPerContinentPercentage")
+    var svgwidth = 500, barpadding = 5
     var barwidth = svgwidth / data.length
+    var toppadding = 15
+    var maxheight = 300
+    var svgheight = getHighestPixelSizeVerticalBar(data, maxheight)
 
     var svgelem = d3.select(".verticalBar")
         .attr("width", svgwidth)
-        .attr("height", svgheight)
 
     var barchart = svgelem.selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
         .attr("y", function(d) {
-            return svgheight - d
+            return svgheight - calcFraction(maxheight, 100, d.percentage) - toppadding
         })
-        .attr("height", function(d) { return d })
+        .attr("height", function(d) {
+            fraction = calcFraction(maxheight, 100, d.percentage)
+            if(fraction > svgheight)
+                svgheight = fraction
+            return fraction
+        })
         .attr("width", barwidth - barpadding)
         .attr("transform", function(d, i) {
             var translate = [barwidth * i, 0]
             return "translate(" + translate + ")"
         })
+        .attr("style", "fill:rgb(0,0,255)")
+}
+
+function calcFraction(maxpx, maxval, elemval){
+    return (elemval / maxval) * maxpx
+}
+
+function getHighestPixelSizeVerticalBar(data, maxpx){
+    var current = 0
+    for(i = 0; i < data.length; i++){
+        var fraction = calcFraction(maxpx, 100, data[i].percentage)
+        if(fraction > current)
+            current = fraction
+    }
+
+    return current
 }
