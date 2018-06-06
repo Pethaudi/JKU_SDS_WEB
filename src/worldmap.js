@@ -1,18 +1,20 @@
-initMap();
-
 const maps_api_key = "AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4";
 var linz = {lat: 48.299821, lng: 14.290297};
 
 async function initMap(){
-    var data = await fetchFromData("Appearances")
+    var data = await fetchFromData("Appearances");
 
-    var markers = new Array()
+    var markers = new Array();
 
-    for(i = 0; i < data.length; i++){
+    for(i = 0; i < data.length; i += 3){
         markers.push({lat: data[i].degreeOfLatitude, lng: data[i].degreeOfLongitude})
     }
 
-    var map = new google.maps.Map(document.getElementById('worldmap'), {
+    var div = document.querySelector("#worldmap");
+
+    console.log(div);
+
+    var map = new google.maps.Map(div, {
         zoom: 4,
         center: linz
       })
@@ -30,5 +32,5 @@ you always need to make an async funtion to wait for the result of the fetch
 */
 function fetchFromData(name){
     return fetch("data/" + name + ".json")
-        .then(response => response.json())
+        .then(response => response.json());
 }
