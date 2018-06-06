@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start -s src -f src -b \"google chrome\" --no-notify"
+    "start": "browser-sync start -s . -f . -b \"google chrome\" --no-notify"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Pethaudi/JKU_SDS_WEB/issues"
   },
-  "homepage": "https://github.com/Pethaudi/JKU_SDS_WEB#readme"
+  "homepage": "https://github.com/Pethaudi/JKU_SDS_WEB#readme",
+  "dependencies": {
+    "chart.js": "^2.7.2"
+  }
 }
