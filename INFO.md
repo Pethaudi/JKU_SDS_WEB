@@ -5,7 +5,7 @@
 ### src/ -> here actually happens all the magic
 
 #### data/ -> here we save all our results from the JVM project (this happens automatically through the JVM project) (attention: don't save larger files than 100MB (add them to .gitignore))
-* -> name all datasets so it explaines it self
+-> name all datasets so it explaines it self
 
 #### js/ -> add all the js classes you have here
 appearancePerType.js -> works with chart.js
