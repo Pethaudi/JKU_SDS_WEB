@@ -2,6 +2,7 @@
 ## this is a repo for research purposes
 
 ## INFO
+(more infos about the project you find under: info.md)
 
 1. start the project with: npm start
 (you must have browser sync installed)
