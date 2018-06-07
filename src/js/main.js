@@ -1,17 +1,11 @@
+import { worker } from "./worker"
+
 showAppearancePerContinentBar()
 verticalBar()
 
-/*
-you always need to make an async funtion to wait for the result of the fetch
-*/
-function fetchFromData(name){
-    return fetch("src/data/" + name + ".json")
-        .then(response => response.json())
-}
-
 async function showAppearancePerContinentBar(){
     let data;
-    data = await fetchFromData("AppearancesPerContinent");
+    data = await worker.fetchFromData("AppearancesPerContinent");
 
     //writing the data into an array
     var arr = new Array();
@@ -36,7 +30,7 @@ async function showAppearancePerContinentBar(){
 }
 
 async function verticalBar(){
-    var data = await fetchFromData("AppearancesPerContinentPercentage")
+    var data = await worker.fetchFromData("AppearancesPerContinentPercentage")
     var svgwidth = 500, barpadding = 5
     var barwidth = svgwidth / data.length
     var toppadding = 15

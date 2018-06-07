@@ -1,3 +1,5 @@
+import { fetchFromData } from "./worker"
+
 const maps_api_key = "AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4";
 var linz = {lat: 48.299821, lng: 14.290297};
 
@@ -25,12 +27,4 @@ async function initMap(){
             map: map
         })
     }
-}
-
-/*
-you always need to make an async funtion to wait for the result of the fetch
-*/
-function fetchFromData(name){
-    return fetch("src/data/" + name + ".json")
-        .then(response => response.json());
 }

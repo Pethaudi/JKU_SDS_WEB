@@ -1,3 +1,5 @@
+import worker from 'worker';
+
 appearancesPerType()
 
 async function appearancesPerType() {
@@ -20,16 +22,11 @@ async function appearancesPerType() {
         data: yaxis
     };
 
-    var barChart = new Chart(densityCanvas, {
+    var barChart = new Chart(canvas, {
         type: 'bar',
         data: {
             labels: xaxis,
             datasets: [densityData]
         }
     });
-}
-
-function fetchFromData(name){
-    return fetch("src/data/" + name + ".json")
-        .then(response => response.json())
 }
