@@ -1,5 +1,3 @@
-import worker from 'worker';
-
 appearancesPerType()
 
 async function appearancesPerType() {
@@ -29,4 +27,13 @@ async function appearancesPerType() {
             datasets: [densityData]
         }
     });
+}
+
+function fetchFromData(name) {
+    return fetch("src/data/" + name + ".json")
+        .then(response => response.json());
+}
+
+function orderData(xaxis, yaxis){
+    
 }

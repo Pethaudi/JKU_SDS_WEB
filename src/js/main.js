@@ -1,11 +1,9 @@
-import { worker } from "./worker"
-
 showAppearancePerContinentBar()
 verticalBar()
 
 async function showAppearancePerContinentBar(){
     let data;
-    data = await worker.fetchFromData("AppearancesPerContinent");
+    data = await fetchFromData("AppearancesPerContinent");
 
     //writing the data into an array
     var arr = new Array();
@@ -30,7 +28,7 @@ async function showAppearancePerContinentBar(){
 }
 
 async function verticalBar(){
-    var data = await worker.fetchFromData("AppearancesPerContinentPercentage")
+    var data = await fetchFromData("AppearancesPerContinentPercentage")
     var svgwidth = 500, barpadding = 5
     var barwidth = svgwidth / data.length
     var toppadding = 15
@@ -74,4 +72,9 @@ function getHighestPixelSizeVerticalBar(data, maxpx){
     }
 
     return current
+}
+
+function fetchFromData(name) {
+    return fetch("src/data/" + name + ".json")
+        .then(response => response.json());
 }
