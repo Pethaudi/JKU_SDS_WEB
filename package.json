@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start -s . -f . -b \"google chrome\" --no-notify"
+    "start": "browser-sync start -s . -f . -b \"google chrome\" --no-notify",
+    "make": "sh initProject.sh"
   },
   "repository": {
     "type": "git",
