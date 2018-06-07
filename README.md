@@ -7,7 +7,6 @@
 1. start the project with: npm start
 (you must have browser sync installed)
 2. save all data files under /results
-3. if you have to install packages insert the command in the initProject.sh
 
 ## (before each command press: shift + cmd + p)
 
@@ -19,3 +18,10 @@
 ## HOW TO SUBMIT CHANGES
 2. git commit
 3. git push
+
+## COMMANDS
+
+1. npm run make  
+this installs you every dependency  
+2. npm run js [name]  
+creates you a new js file with basic functions (because the import doens't work)
