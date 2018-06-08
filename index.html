@@ -40,9 +40,13 @@
         <div>
             <h2>appearances per day with coordinates on a map</h2>
             <div id="perdaycoordinates">
-                <span><button onclick="earlier()"><</button> <button onclick="later()" value=">">></button></span>
+                <span>
+                    <button onclick="earlier()"><</button>
+                    <button onclick="later()" value=">">></button>
+                    <span id="choosenday"></span>
+                </span>
 
-                <div id="mapperday"></div>
+                <div id="mapperday" style="height: 800px"></div>
                 <script src="src/js/appearancesPerDayWithCoordinates.js"></script>
                 <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
