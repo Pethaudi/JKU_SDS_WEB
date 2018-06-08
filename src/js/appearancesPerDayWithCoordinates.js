@@ -25,7 +25,7 @@ function later(){
 
 function earlier(){
     if(cnt == 0)
-        cnt = data.length
+        cnt = data.length -1
     else cnt--
     loadDataset()
 }
