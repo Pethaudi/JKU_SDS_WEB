@@ -73,8 +73,3 @@ function getHighestPixelSizeVerticalBar(data, maxpx){
 
     return current
 }
-
-function fetchFromData(name) {
-    return fetch("src/data/" + name + ".json")
-        .then(response => response.json());
-}

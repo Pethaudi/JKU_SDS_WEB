@@ -26,8 +26,3 @@ async function initMap(){
         })
     }
 }
-
-function fetchFromData(name) {
-    return fetch("src/data/" + name + ".json")
-        .then(response => response.json());
-}
