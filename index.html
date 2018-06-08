@@ -8,7 +8,7 @@
     </head>
     <body>
         <script src="src/js/test.js"></script>
-        <h1>Hello</h1>
+        <!--<h1>Hello</h1>
 
         <div>
             <h2>appearances per continent</h2>
@@ -29,12 +29,25 @@
         <div>
             <h2>Appearances per type TOP 10</h2>
             <canvas id="appearancesPerTypeTOP10"></canvas>
-        </div>
+        </div>-->
 
         <div>
             <h2>appearances per day</h2>
             <canvas id="appearancesPerDays"></canvas>
             <script src="src/js/appearancesPerDays.js"></script>
+        </div>
+
+        <div>
+            <h2>appearances per day with coordinates on a map</h2>
+            <div id="perdaycoordinates">
+                <span><button onclick="earlier()"><</button> <button onclick="later()" value=">">></button></span>
+
+                <div id="mapperday"></div>
+                <script src="src/js/appearancesPerDayWithCoordinates.js"></script>
+                <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
+                </script>
+            </div>
         </div>
 
         <!--<div>
