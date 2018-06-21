@@ -10,7 +10,8 @@ async function appearancesPerHour(){
 
     var densityData = {
         label: "appearances per hour",
-        data: yaxis
+        data: yaxis,
+        backgroundColor: 'rgba(1,1,1,0.5)'
     }
 
     var barChart = new Chart(canvas, {

@@ -47,7 +47,8 @@ async function appearancesPerTypeTop10(){
 
     var densityData = {
         label: "appearances per type",
-        data: newyaxis
+        data: newyaxis,
+        backgroundColor: 'rgba(1,1,1,0.5)'
     }
 
     var barChart = new Chart(canvas, {

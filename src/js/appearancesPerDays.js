@@ -15,7 +15,8 @@ async function appearancesPerDays(){
 
     var densityData = {
         label: 'appearances per day',
-        data: yaxis
+        data: yaxis,
+        backgroundColor: 'rgba(1,1,1,0.5)'
     };
 
     var barChart = new Chart(canvas, {
