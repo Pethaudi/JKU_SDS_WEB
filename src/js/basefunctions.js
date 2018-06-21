@@ -26,8 +26,8 @@ function orderData(xaxis, yaxis){
 //for bars3
 function orderDataAfterX(xaxis, yaxis){
     for(i = 0; i < xaxis.length; i++){
-        for(j = 0; j < xaxis.length; j++){
-            if(xaxis[j] < xaxis[i]){
+        for(j = i; j < xaxis.length; j++){
+            if(Number(xaxis[j]) < Number(xaxis[i])){
                 tmp = xaxis[i]
                 xaxis[i] = xaxis[j]
                 xaxis[j] = tmp
