@@ -23,3 +23,19 @@ async function appearancesPerHour(){
         }
     })
 }
+
+function appearancesPerHourPreDefined(canvas, xaxis, yaxis){
+    var densityData = {
+        label: "appearances per hour",
+        data: yaxis,
+        backgroundColor: 'rgba(1,1,1,0.5)'
+    }
+
+    var barChart = new Chart(canvas, {
+        type: "bar",
+        data: {
+            labels: xaxis,
+            datasets: [densityData]
+        }
+    })
+}
