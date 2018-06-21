@@ -23,6 +23,22 @@ function orderData(xaxis, yaxis){
     }
 }
 
+//for bars3
+function orderDataAfterX(xaxis, yaxis){
+    for(i = 0; i < xaxis.length; i++){
+        for(j = 0; j < xaxis.length; j++){
+            if(xaxis[j] < xaxis[i]){
+                tmp = xaxis[i]
+                xaxis[i] = xaxis[j]
+                xaxis[j] = tmp
+                tmp = yaxis[i]
+                yaxis[i] = yaxis[j]
+                yaxis[j] = tmp
+            }
+        }
+    }
+}
+
 //loads and parses the data for a bar chart
 async function parseNameCounterDataForBars(name, xaxis, yaxis){
     var data = await fetchFromData(name)

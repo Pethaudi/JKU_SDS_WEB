@@ -7,6 +7,7 @@ async function appearancesPerHour(){
     var yaxis = new Array()
 
     await parseNameCounterDataForBars("AppearancesPerHour", xaxis, yaxis)
+    orderDataAfterX(xaxis, yaxis)
 
     var densityData = {
         label: "appearances per hour",
