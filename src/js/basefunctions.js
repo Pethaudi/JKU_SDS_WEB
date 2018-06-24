@@ -48,3 +48,16 @@ async function parseNameCounterDataForBars(name, xaxis, yaxis){
         yaxis.push(data[i].counter)
     }
 }
+
+function getImagepath(pokemonid){
+    var path = "src/img/"
+    var ending = ".png"
+
+    if(pokemonid.length == 3){
+        return path + pokemonid + ending
+    } else if(pokemonid.length == 2){
+        return path + "0" + pokemonid + ending
+    } else {
+        return path + "00" + pokemonid + ending
+    }
+}
