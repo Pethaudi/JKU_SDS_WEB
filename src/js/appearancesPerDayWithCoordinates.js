@@ -46,10 +46,7 @@ function loadDataset(){
     })
 
     for(i = 0; i < data[cnt].appearances.length; i++){
-        new google.maps.Marker({
-            position: {lat: data[cnt].appearances[i].lat, lng: data[cnt].appearances[i].long},
-            map: map
-        })
+        createMarker(map, data[cnt].appearances[i])
     }
 
     choosenday.textContent = "day: " + data[cnt].day

@@ -52,12 +52,21 @@ async function parseNameCounterDataForBars(name, xaxis, yaxis){
 function getImagepath(pokemonid){
     var path = "src/img/"
     var ending = ".png"
+    console.log(pokemonid)
 
-    if(pokemonid.length == 3){
+    if(pokemonid >= 100){
         return path + pokemonid + ending
-    } else if(pokemonid.length == 2){
+    } else if(pokemonid >= 10){
         return path + "0" + pokemonid + ending
     } else {
         return path + "00" + pokemonid + ending
     }
+}
+
+function createMarker(map, pokemon){
+    new google.maps.Marker({
+        position: {lat: pokemon.lat, lng: pokemon.long},
+        map: map,
+        icon: getImagepath(pokemon.pokemonid)
+    })
 }
