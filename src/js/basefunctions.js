@@ -67,6 +67,6 @@ function createMarker(map, pokemon){
     new google.maps.Marker({
         position: {lat: pokemon.lat, lng: pokemon.long},
         map: map,
-        icon: getImagepath(pokemon.pokemonid)
+        icon: getMarker(pokemon.pokemonid)
     })
 }
