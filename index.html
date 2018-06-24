@@ -1,23 +1,24 @@
 <html>
-    <head>
-        <title>[title]</title>
 
-        <link rel="stylesheet" href="src/styles.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<head>
+    <title>[title]</title>
 
-    </head>
-    <body>
-        <script src="src/js/basefunctions.js"></script>
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
-        </script>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-        <!--<div>
+</head>
+
+<body>
+    <script src="src/js/basefunctions.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
+    </script>
+
+    <!--<div>
             <h2>testing google maps</h2>
             <div id="mapstester" style="height: 800px"></div>
             <script src="/src/js/mapstester.js"></script>
         </div>-->
-        <!--<h1>Hello</h1>
+    <!--<h1>Hello</h1>
 
         <div>
             <h2>appearances per continent</h2>
@@ -40,43 +41,70 @@
             <canvas id="appearancesPerTypeTOP10"></canvas>
         </div>-->
 
-        <div>
-            <h2>appearances per hour</h2>
-            <canvas id="appearancesperhour"></canvas>
-            <script src="src/js/appearancesPerHour.js"></script>
+    <div>
+        <h2>appearances per hour</h2>
+        <canvas id="appearancesperhour"></canvas>
+        <script src="src/js/appearancesPerHour.js"></script>
 
-            <h2>appearances per day per hour</h2>
+        <h2>appearances per day per hour</h2>
+        <span>
+            <button onclick="earlierPerDayPerHour()">
+                <</button>
+                    <button onclick="laterPerDayPerHour()">></button>
+                    <span id="choosendayPerDayPerHour"></span>
+        </span>
+        <br>
+        <canvas id="appearancesPerDayPerHour"></canvas>
+        <script src="src/js/appearancesPerDayPerHour.js"></script>
+
+        <h2>appearances per day per hour with coordinates</h2>
+        <span>
+            <span>Day: </span>
+            <button onclick="apdphwcearlierday()"><</button>
+            <button onclick="apdphwclaterday()" value=">">></button>
+            <span id="apdphwcchoosenday"></span>
+        </span>
+
+        <br>
+
+        <span>
+            <span>Hours: </span>
+            <button onclick="apdphwcearlierhour()"><</button>
+            <button onclick="apdphwclaterhour()" value=">">></button>
+            <span id="apdphwcchoosenhour"></span>
+        </span>
+
+        <br>
+
+        <div id="apdphwc1" style="height: 800px; width: 33%; float: left; margin-left: 5px"></div>
+        <div id="apdphwc2" style="height: 800px; width: 33%; float: left; margin-left: 5px"></div>
+        <div id="apdphwc3" style="height: 800px; width: 33%; float: left; margin-left: 5px"></div>
+
+        <script src="src/js/appearancesPerDayPerHourWithCoordinates.js"></script>
+    </div>
+
+    <div>
+        <h2>appearances per day</h2>
+        <canvas id="appearancesPerDays"></canvas>
+        <script src="src/js/appearancesPerDays.js"></script>
+    </div>
+
+    <div>
+        <h2>appearances per day with coordinates on a map</h2>
+        <div id="perdaycoordinates">
             <span>
-                <button onclick="earlierPerDayPerHour()"><</button>
-                <button onclick="laterPerDayPerHour()">></button>
-                <span id="choosendayPerDayPerHour"></span>
+                <button onclick="earlier()">
+                    <</button>
+                        <button onclick="later()" value=">">></button>
+                        <span id="choosenday"></span>
             </span>
-            <br>
-            <canvas id="appearancesPerDayPerHour"></canvas>
-            <script src="src/js/appearancesPerDayPerHour.js"></script>
+
+            <div id="mapperday" style="height: 800px"></div>
+            <script src="src/js/appearancesPerDayWithCoordinates.js"></script>
         </div>
+    </div>
 
-        <div>
-            <h2>appearances per day</h2>
-            <canvas id="appearancesPerDays"></canvas>
-            <script src="src/js/appearancesPerDays.js"></script>
-        </div>
-
-        <div>
-            <h2>appearances per day with coordinates on a map</h2>
-            <div id="perdaycoordinates">
-                <span>
-                    <button onclick="earlier()"><</button>
-                    <button onclick="later()" value=">">></button>
-                    <span id="choosenday"></span>
-                </span>
-
-                <div id="mapperday" style="height: 800px"></div>
-                <script src="src/js/appearancesPerDayWithCoordinates.js"></script>
-            </div>
-        </div>
-
-        <!--<div>
+    <!--<div>
             <h2>Worldmap</h2>
             <div id="worldmap"></div>
             <script src="js/worldmap.js"></script>
@@ -85,12 +113,13 @@
             </script>
         </div>-->
 
-        <!-- chartjs -->
-        <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="src/js/main.js"></script>
+    <!-- chartjs -->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="src/js/main.js"></script>
 
-        <script src="src/js/picker.js"></script>
+    <script src="src/js/picker.js"></script>
 
-    </body>
+</body>
+
 </html>
