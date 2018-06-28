@@ -1,17 +1,13 @@
-/*
-you always need to make an async funtion to wait for the result of the fetch
-*/
+appearancesPerTerrain()
 
-appearancesPerDays()
-
-async function appearancesPerDays(){
-    var canvas = document.querySelector("#appearancesPerDays")
+async function appearancesPerTerrain(){
+    var canvas = document.querySelector("#appearancesperterrain")
 
     var xaxis = new Array()
     var yaxis = new Array()
 
-    await parseNameCounterDataForBars("AppearancesPerDays", xaxis, yaxis)
-    //orderData(xaxis, yaxis)
+    await parseNameCounterDataForBars("AppearancesPerTerrain", xaxis, yaxis)
+    orderData(xaxis, yaxis)
 
     var densityData = {
         label: 'appearances per terrain',

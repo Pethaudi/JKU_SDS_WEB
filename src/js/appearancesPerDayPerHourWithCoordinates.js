@@ -11,6 +11,8 @@ var data
 var currentday
 var currenthour
 
+//const linz = {lat: 48.299821, lng: 14.290297};
+
 async function initMap(){
     data = await fetchFromData("AppearancesPerDayPerHourWithCoordinates")
     currentday = 0

@@ -10,36 +10,35 @@
 
 <body>
     <script src="src/js/basefunctions.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
-    </script>
 
     <!--<div>
             <h2>testing google maps</h2>
             <div id="mapstester" style="height: 800px"></div>
             <script src="/src/js/mapstester.js"></script>
         </div>-->
-    <!--<h1>Hello</h1>
+    <h1>Hello</h1>
 
-        <div>
-            <h2>appearances per continent</h2>
-            <div class="appearancesPerContinent"></div>
-        </div>
+    <div>
+        <h2>appearances per continent</h2>
+        <div class="appearancesPerContinent"></div>
+    </div>
 
-        <div>
-            <h2>vertical bar</h2>
-            <svg class="verticalBar"></div>
-        </div>
+    <div>
+        <h2>vertical bar</h2>
+        <svg class="verticalBar">
+    </div>
+    </div>
 
-        <div>
-            <h2>Appearances per type</h2>
-            <canvas id="appearancesPerType"></canvas>
-            <script src="src/js/appearancesPerType.js"></script>
-        </div>
+    <div>
+        <h2>Appearances per type</h2>
+        <canvas id="appearancesPerType"></canvas>
+        <script src="src/js/appearancesPerType.js"></script>
+    </div>
 
-        <div>
-            <h2>Appearances per type TOP 10</h2>
-            <canvas id="appearancesPerTypeTOP10"></canvas>
-        </div>-->
+    <div>
+        <h2>Appearances per type TOP 10</h2>
+        <canvas id="appearancesPerTypeTOP10"></canvas>
+    </div>
 
     <div>
         <h2>appearances per hour</h2>
@@ -60,18 +59,20 @@
         <h2>appearances per day per hour with coordinates</h2>
         <span>
             <span>Day: </span>
-            <button onclick="apdphwcearlierday()"><</button>
-            <button onclick="apdphwclaterday()" value=">">></button>
-            <span id="apdphwcchoosenday"></span>
+            <button onclick="apdphwcearlierday()">
+                <</button>
+                    <button onclick="apdphwclaterday()" value=">">></button>
+                    <span id="apdphwcchoosenday"></span>
         </span>
 
         <br>
 
         <span>
             <span>Hours: </span>
-            <button onclick="apdphwcearlierhour()"><</button>
-            <button onclick="apdphwclaterhour()" value=">">></button>
-            <span id="apdphwcchoosenhour"></span>
+            <button onclick="apdphwcearlierhour()">
+                <</button>
+                    <button onclick="apdphwclaterhour()" value=">">></button>
+                    <span id="apdphwcchoosenhour"></span>
         </span>
 
         <br>
@@ -100,18 +101,22 @@
             </span>
 
             <div id="mapperday" style="height: 800px"></div>
-            <script src="src/js/appearancesPerDayWithCoordinates.js"></script>
+            <!--<script src="src/js/appearancesPerDayWithCoordinates.js"></script>-->
         </div>
     </div>
 
     <!--<div>
             <h2>Worldmap</h2>
             <div id="worldmap"></div>
-            <script src="js/worldmap.js"></script>
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
-            </script>
+            <script src="src/js/worldmap.js"></script>
         </div>-->
+
+
+    <div>
+        <h2>appearances per terrain</h2>
+        <canvas id="appearancesperterrain"></canvas>
+        <script src="src/js/appearancesPerTerrain.js"></script>
+    </div>
 
     <!-- chartjs -->
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
@@ -119,6 +124,8 @@
     <script src="src/js/main.js"></script>
 
     <script src="src/js/picker.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
+    </script>
 
 </body>
 
