@@ -41,7 +41,7 @@ function reverseData(){
 function loadDataset(){
     notVisible()
     map = new google.maps.Map(div, {
-        zoom: 4,
+        zoom: 2,
         center: linz
     })
 
