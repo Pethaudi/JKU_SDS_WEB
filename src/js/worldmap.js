@@ -15,7 +15,7 @@ async function initMap(){
     console.log(div);
 
     var map = new google.maps.Map(div, {
-        zoom: 1,
+        zoom: 2.4,
         center: linz
       })
 

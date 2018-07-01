@@ -1,7 +1,7 @@
 var data
 var div = document.querySelector("#mapperday")
 var choosenday = document.querySelector("#choosenday")
-var cnt = 0
+var cnt = 4
 var map
 const linz = {lat: 48.299821, lng: 14.290297};
 
@@ -41,7 +41,7 @@ function reverseData(){
 function loadDataset(){
     notVisible()
     map = new google.maps.Map(div, {
-        zoom: 2,
+        zoom: 2.5,
         center: linz
     })
 
@@ -51,12 +51,4 @@ function loadDataset(){
 
     choosenday.textContent = "day: " + data[cnt].day
     visible()
-}
-
-function visible(){
-    document.querySelector("#perdaycoordinates").style.visibility = 'visible'
-}
-
-function notVisible(){
-    document.querySelector("#perdaycoordinates").style.visibility = 'hidden'
 }

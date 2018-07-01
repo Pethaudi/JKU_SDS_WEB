@@ -8,5 +8,10 @@ rect {
 }
 
 #worldmap {
-    height: 800px
+    height: 900px
+}
+
+body {
+    color: white;
+    background: #ff4f4c
 }

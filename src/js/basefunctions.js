@@ -42,7 +42,7 @@ function orderDataAfterX(xaxis, yaxis){
 //loads and parses the data for a bar chart
 async function parseNameCounterDataForBars(name, xaxis, yaxis){
     var data = await fetchFromData(name)
-
+    console.log(data)
     for(i = 0; i < data.length; i++){
         xaxis.push(data[i].name)
         yaxis.push(data[i].counter)
@@ -64,9 +64,10 @@ function getImagepath(pokemonid){
 }
 
 function createMarker(map, pokemon){
-    new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: {lat: pokemon.lat, lng: pokemon.long},
         map: map,
         icon: getMarker(pokemon.pokemonid)
     })
+    return marker
 }

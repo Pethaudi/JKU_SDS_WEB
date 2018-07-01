@@ -25,10 +25,11 @@ async function appearancesPerHour(){
 }
 
 function appearancesPerHourPreDefined(canvas, xaxis, yaxis){
+    Chart.defaults.global.defaultFontColor = "#fff";
     var densityData = {
         label: "appearances per hour",
         data: yaxis,
-        backgroundColor: 'rgba(1,1,1,0.5)'
+        backgroundColor: 'rgba(255,255,255,1)'
     }
 
     var barChart = new Chart(canvas, {

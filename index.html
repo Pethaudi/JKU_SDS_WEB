@@ -8,15 +8,30 @@
 
 </head>
 
-<body>
+<body bgcolor="#ff4f4c">
     <script src="src/js/basefunctions.js"></script>
 
     <!--<div>
         <h2>world spawns per hour</h2>
-        <div id="worldspawnsperhour"></div>
+        <div id="worldspawnsperhour" style="height: 1000px"></div>
         <script src="src/js/worldspawnsperhour.js"></script>
     </div>-->
 
+    <div>
+        <h2>how often do the pokemon spawn</h2>
+        <canvas id="chummily"></canvas>
+        <script src="src/js/chummlyPokemon.js"></script>
+    </div>
+
+    <div>
+        <h2>weather</h2>
+        <canvas id="weather"></canvas>
+    </div>
+
+    <div>
+        <h2>terrain</h2>
+        <canvas id="terrain"></canvas>
+    </div>
     <!--<div>
             <h2>testing google maps</h2>
             <div id="mapstester" style="height: 800px"></div>
@@ -49,8 +64,7 @@
     <div>
         <h2>appearances per hour</h2>
         <canvas id="appearancesperhour"></canvas>
-        <script src="src/js/appearancesPerHour.js"></script>
-
+    --><script src="src/js/appearancesPerHour.js"></script><!--
         <h2>appearances per day per hour</h2>
         <span>
             <button onclick="earlierPerDayPerHour()">
@@ -87,15 +101,15 @@
         <div id="apdphwc3" style="height: 800px; width: 33%; float: left; margin-left: 5px"></div>
 
         <script src="src/js/appearancesPerDayPerHourWithCoordinates.js"></script>
-    </div>
+    </div>-->
 
-    <div>
+    <!--<div>
         <h2>appearances per day</h2>
         <canvas id="appearancesPerDays"></canvas>
         <script src="src/js/appearancesPerDays.js"></script>
     </div>-->
 
-    <div>
+    <!--<div>
         <h2>appearances per day with coordinates on a map</h2>
         <div id="perdaycoordinates">
             <span>
@@ -105,19 +119,19 @@
                         <span id="choosenday"></span>
             </span>
 
-            <div id="mapperday" style="height: 800px"></div>
+            <div id="mapperday" style="height: 1000px"></div>
             <script src="src/js/appearancesPerDayWithCoordinates.js"></script>
         </div>
-    </div>
+    </div>-->
 
     <!--<div>
             <h2>Worldmap</h2>
             <div id="worldmap"></div>
             <script src="src/js/worldmap.js"></script>
-        </div>-->
+        </div>
 
 
-    <!--<div>
+    <div>
         <h2>appearances per terrain</h2>
         <canvas id="appearancesperterrain"></canvas>
         <script src="src/js/appearancesPerTerrain.js"></script>
@@ -129,8 +143,8 @@
     <script src="src/js/main.js"></script>
 
     <script src="src/js/picker.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
-    </script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmVJrAL8e75c9FRVKuGEE2AqIzRmpRBA4&callback=initMap">
+    </script>-->
 
 </body>
 
